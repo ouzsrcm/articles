@@ -1,12 +1,14 @@
 ﻿using Articles.Entities.Base;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Articles.Entities.RecordStructure
 {
     public class Article : EntityBase, IEntityBase
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ArticleId { get; set; }
 
         public int CategoryId { get; set; }
