@@ -4,9 +4,9 @@ using Articles.Entities.RecordStructure;
 
 namespace Articles.DataAccess.Concrete
 {
-    public class CategoryReposiyory : RepositoryBase<Category>, ICategoryRepository
+    public class CategoryRepository : RepositoryBase<Category>, ICategoryRepository
     {
-        public CategoryReposiyory(DatabaseContext _databaseContext)
+        public CategoryRepository(DatabaseContext _databaseContext)
             : base(_databaseContext)
         {
 

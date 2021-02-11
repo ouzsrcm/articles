@@ -35,12 +35,6 @@ namespace Articles.DataAccess.Concrete
             return res.Where(x => x.IsDeleted == false);
         }
 
-        public T Get(Expression<Func<T, bool>> expression)
-        {
-            var res = this.databaseContext.Set<T>().Where(expression);
-            return res.Where(x => x.IsDeleted == false).FirstOrDefault();
-        }
-
         public IEnumerable<T> GetAll()
         {
             return this.databaseContext.Set<T>().Where(x => x.IsDeleted == false);

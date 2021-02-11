@@ -7,7 +7,6 @@ namespace Articles.DataAccess.Abstract
 {
     public interface IRepositoryBase<T> where T : class, IEntityBase
     {
-        T Get(Expression<Func<T, bool>> expression);
         IEnumerable<T> FindBy(Expression<Func<T, bool>> expression);
         IEnumerable<T> GetAll();
         void Add(T entity);

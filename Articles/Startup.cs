@@ -1,4 +1,7 @@
+using Articles.DataAccess.Abstract;
+using Articles.DataAccess.Concrete;
 using Articles.Entities;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +26,12 @@ namespace Articles
             var connectionString = Configuration.GetConnectionString("connectionString");
             services.AddDbContext<DatabaseContext>(x => x.UseSqlServer(connectionString));
             services.AddControllers();
+
+            services.AddSingleton<IMapper, Mapper>();
+
+            services.AddSingleton<IArticleRepository, ArticleRepository>();
+            services.AddSingleton<ICommentRepository, CommentRepository>();
+            services.AddSingleton<ICategoryRepository, CategoryRepository>();
 
             services.AddSwaggerGen();
         }

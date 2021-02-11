@@ -5,13 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Articles.DataAccess\Articles.DataAccess.csproj" />
-    <ProjectReference Include="..\Articles.Entities\Articles.Entities.csproj" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\Abstract\" />
-    <Folder Include="Services\Concrete\" />
+    <ProjectReference Include="..\Articles.DataAccess\Articles.DataAccess.csproj" />
+    <ProjectReference Include="..\Articles.Entities\Articles.Entities.csproj" />
   </ItemGroup>
 
 </Project>
