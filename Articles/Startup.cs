@@ -23,6 +23,8 @@ namespace Articles
             var connectionString = Configuration.GetConnectionString("connectionString");
             services.AddDbContext<DatabaseContext>(x => x.UseSqlServer(connectionString));
             services.AddControllers();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +34,12 @@ namespace Articles
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(x =>
+            {
+                x.SwaggerEndpoint("/swagger/v1/swagger.json", "Articles");
+            });
 
             app.UseHttpsRedirection();
 

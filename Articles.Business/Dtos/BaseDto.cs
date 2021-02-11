@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Articles.Entities.Base
+namespace Articles.Business.Dtos
 {
-    public class EntityBase
+    public class BaseDto
     {
         public Guid UniqueId { get; set; }
         public DateTime CreationDate { get; set; }

@@ -4,14 +4,16 @@ using Articles.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Articles.Entities.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20210211121457_DeletionDateAdded")]
+    partial class DeletionDateAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,6 +44,9 @@ namespace Articles.Entities.Migrations
 
                     b.Property<int>("CreationUserId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("DeletionDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -88,6 +93,9 @@ namespace Articles.Entities.Migrations
                     b.Property<int>("CreationUserId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("DeletionDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -126,6 +134,9 @@ namespace Articles.Entities.Migrations
 
                     b.Property<int>("CreationUserId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("DeletionDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
