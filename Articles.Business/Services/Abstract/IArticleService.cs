@@ -16,6 +16,12 @@ namespace Articles.Business.Services.Abstract
         ArticleDto Update(ArticleDto article);
         int Save();
 
+        //Categories
+        CategoryDto Add(CategoryDto category);
+        IEnumerable<CategoryDto> GetCategories();
+        int SaveCategory();
+
+
         //Comments
         IEnumerable<Comment> GetComments(Expression<Func<Comment, bool>> expression);
         bool DeleteComment(CommentDto article);

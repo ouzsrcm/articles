@@ -16,11 +16,16 @@ namespace Articles.DataAccess.Concrete
             databaseContext = _databaseContext;
         }
 
-        public void Add(T entity)
+        public T Add(T entity)
         {
-            entity.UniqueId = Guid.NewGuid();
+            if (entity.UniqueId == Guid.Empty)
+                entity.UniqueId = Guid.NewGuid();
+
             entity.CreationDate = DateTime.Now;
-            this.databaseContext.AddAsync<T>(entity);
+            entity.IsDeleted = false;
+
+            this.databaseContext.Add<T>(entity);
+            return entity;
         }
 
         public void Delete(T entity)
@@ -37,7 +42,7 @@ namespace Articles.DataAccess.Concrete
 
         public IQueryable<T> Get()
         {
-            return this.databaseContext.Set<T>().Where(x => x.IsDeleted == false);            
+            return this.databaseContext.Set<T>().Where(x => x.IsDeleted == false);
         }
 
         public IQueryable<T> Get(Expression<Func<T, bool>> expression)

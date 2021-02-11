@@ -37,9 +37,31 @@ namespace Articles.Business.Services.Concrete
         /// <returns></returns>
         public ArticleDto Add(ArticleDto article)
         {
+            if (article.CategoryId == 0)
+                throw new Exception("Kategori bilgisi boş olamaz.");
+
             var entity = mapper.Map<Article>(article);
-            articleRepository.Add(entity);
-            return article;
+
+            var res = articleRepository.Add(entity);
+            if (res == null)
+                throw new Exception("Makale eklenemedi!");
+
+            Save();
+
+            return mapper.Map<ArticleDto>(res);
+        }
+
+        public CategoryDto Add(CategoryDto category)
+        {
+            if (string.IsNullOrEmpty(category.Name))
+                throw new Exception("Kategori adı boş olamaz!");
+
+            var entity = mapper.Map<Category>(category);
+            var res = categoryRepository.Add(entity);
+
+            SaveCategory();
+            
+            return mapper.Map<CategoryDto>(res);
         }
 
         /// <summary>
@@ -101,6 +123,11 @@ namespace Articles.Business.Services.Concrete
             return mapper.Map<IEnumerable<Article>, IEnumerable<ArticleDto>>(res);
         }
 
+        public IEnumerable<CategoryDto> GetCategories()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Makale bazlı yada genel yorum listesi almak için kullanılacak.
         /// </summary>
@@ -119,6 +146,11 @@ namespace Articles.Business.Services.Concrete
         {
             return articleRepository.Save().Result;
             //TODO: Burda loglama yapılabilir.
+        }
+
+        public int SaveCategory()
+        {
+            return categoryRepository.Save().Result;
         }
 
         /// <summary>

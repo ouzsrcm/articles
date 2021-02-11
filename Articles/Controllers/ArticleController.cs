@@ -39,5 +39,54 @@ namespace Articles.Controllers
             var res = articleService.Get(x => !x.IsPublished);
             return Ok(res);
         }
+
+        [HttpGet]
+        [Route("ArticleById")]
+        public ActionResult<ArticleDto> ArticleById(int ArticleId)
+        {
+            var res = articleService.Get(x => x.ArticleId == ArticleId);
+            return Ok(res);
+        }
+
+        [HttpPost]
+        [Route("Add")]
+        public ActionResult Add([FromBody] ArticleDto model)
+        {
+            if (model == null)
+                return BadRequest("Makale boş olamaz.");
+
+            if (!ModelState.IsValid)
+                return BadRequest("Lütfen girmiş olduğunuz değerleri kontrol ediniz.");
+            try
+            {
+                var res = articleService.Add(model);
+
+                return Ok(res);
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("AddCategory")]
+        public ActionResult AddCategory([FromBody] CategoryDto model)
+        {
+            if (model == null)
+                return BadRequest("Kategori boş olamaz.");
+
+            if (!ModelState.IsValid)
+                return BadRequest("Lütfen girmiş olduğunuz değerleri kontrol ediniz.");
+            try
+            {
+                var res = articleService.Add(model);
+                return Ok(res);
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
 }

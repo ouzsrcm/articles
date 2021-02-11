@@ -11,7 +11,7 @@ namespace Articles.DataAccess.Abstract
         Task<T> FindBy(Expression<Func<T, bool>> expression);
         IQueryable<T> Get(Expression<Func<T, bool>> expression);
         IQueryable<T> Get();
-        void Add(T entity);
+        T Add(T entity);
         void Update(T entity);
         void Delete(T entity);
         Task<int> Save();
