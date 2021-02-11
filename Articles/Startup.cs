@@ -1,3 +1,5 @@
+using Articles.Business.Services.Abstract;
+using Articles.Business.Services.Concrete;
 using Articles.DataAccess.Abstract;
 using Articles.DataAccess.Concrete;
 using Articles.Entities;
@@ -32,6 +34,9 @@ namespace Articles
             services.AddSingleton<IArticleRepository, ArticleRepository>();
             services.AddSingleton<ICommentRepository, CommentRepository>();
             services.AddSingleton<ICategoryRepository, CategoryRepository>();
+
+            services.AddSingleton<IArticleService, ArticleService>();
+            services.AddSingleton<IUserService, UserService>();
 
             services.AddSwaggerGen();
         }
