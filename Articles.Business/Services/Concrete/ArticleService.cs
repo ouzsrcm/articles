@@ -5,6 +5,7 @@ using Articles.Entities.RecordStructure;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace Articles.Business.Services.Concrete
@@ -84,9 +85,16 @@ namespace Articles.Business.Services.Concrete
         public bool Delete(ArticleDto article)
         {
             var entity = mapper.Map<Article>(article);
-            articleRepository.Delete(entity);
+            articleRepository.Delete(entity.UniqueId);
             return true;
             //TODO: delete metodu void olmamalıydı.
+        }
+
+        public bool Delete(Guid ArticleId)
+        {
+            articleRepository.Delete(ArticleId);
+            Save();
+            return true;
         }
 
         /// <summary>
@@ -97,7 +105,7 @@ namespace Articles.Business.Services.Concrete
         public bool DeleteComment(CommentDto article)
         {
             var entity = mapper.Map<Comment>(article);
-            commentRepository.Delete(entity);
+            commentRepository.Delete(entity.UniqueId);
             return true;
         }
 

@@ -1,6 +1,7 @@
 ﻿using Articles.DataAccess.Abstract;
 using Articles.Entities;
 using Articles.Entities.Base;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
@@ -28,11 +29,14 @@ namespace Articles.DataAccess.Concrete
             return entity;
         }
 
-        public void Delete(T entity)
+        public void Delete(Guid UniqueId)
         {
+            var entity = Get(x => x.UniqueId == UniqueId).FirstOrDefault();
+            if (entity == null)
+                return;
             entity.DeletionDate = DateTime.Now;
             entity.IsDeleted = true;
-            Update(entity);
+            this.databaseContext.Update<T>(entity);
         }
 
         public async Task<T> FindBy(Expression<Func<T, bool>> expression)
@@ -58,7 +62,8 @@ namespace Articles.DataAccess.Concrete
 
         public void Update(T entity)
         {
-            this.databaseContext.Update<T>(entity);
+            this.databaseContext.Entry(entity).State = EntityState.Modified;
+            //this.databaseContext.Update<T>(entity);
         }
     }
 }

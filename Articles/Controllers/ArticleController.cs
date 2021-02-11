@@ -1,6 +1,7 @@
 ﻿using Articles.Business.Dtos;
 using Articles.Business.Services.Abstract;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace Articles.Controllers
@@ -82,6 +83,20 @@ namespace Articles.Controllers
             {
                 var res = articleService.Add(model);
                 return Ok(res);
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpDelete("{UniqueHash}")]
+        public ActionResult DeleteArticle(Guid UniqueHash)
+        {
+            try
+            {
+                var res = articleService.Delete(UniqueHash);
+                return Ok(res ? "Makale kaydı başarıyla silindi." : "Makale silinemedi");
             }
             catch (System.Exception ex)
             {

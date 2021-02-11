@@ -13,7 +13,7 @@ namespace Articles.DataAccess.Abstract
         IQueryable<T> Get();
         T Add(T entity);
         void Update(T entity);
-        void Delete(T entity);
+        void Delete(Guid UniqueId);
         Task<int> Save();
     }
 }

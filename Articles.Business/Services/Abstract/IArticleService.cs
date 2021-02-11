@@ -12,6 +12,7 @@ namespace Articles.Business.Services.Abstract
         IEnumerable<ArticleDto> Get();
         IEnumerable<ArticleDto> Get(Expression<Func<Article, bool>> expression);
         bool Delete(ArticleDto article);
+        bool Delete(Guid ArticleId);
         ArticleDto Add(ArticleDto article);
         ArticleDto Update(ArticleDto article);
         int Save();
