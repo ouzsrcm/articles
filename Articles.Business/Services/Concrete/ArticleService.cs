@@ -84,9 +84,21 @@ namespace Articles.Business.Services.Concrete
         /// </summary>
         /// <param name="expression"></param>
         /// <returns></returns>
-        public IEnumerable<Article> Get(Expression<Func<Article, bool>> expression)
+        public IEnumerable<ArticleDto> Get()
         {
-            return articleRepository.FindBy(expression);
+            var res = articleRepository.Get();
+            return mapper.Map<IEnumerable<Article>, IEnumerable<ArticleDto>>(res);
+        }
+
+        /// <summary>
+        /// Liste yada tekil makale getirmek için kullanılacak.
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
+        public IEnumerable<ArticleDto> Get(Expression<Func<Article, bool>> expression)
+        {
+            var res = articleRepository.Get(expression);
+            return mapper.Map<IEnumerable<Article>, IEnumerable<ArticleDto>>(res);
         }
 
         /// <summary>
@@ -96,7 +108,7 @@ namespace Articles.Business.Services.Concrete
         /// <returns></returns>
         public IEnumerable<Comment> GetComments(Expression<Func<Comment, bool>> expression)
         {
-            return commentRepository.FindBy(expression);
+            return commentRepository.Get(expression);
         }
 
         /// <summary>
@@ -105,7 +117,8 @@ namespace Articles.Business.Services.Concrete
         /// <returns></returns>
         public int Save()
         {
-            return articleRepository.Save();
+            return articleRepository.Save().Result;
+            //TODO: Burda loglama yapılabilir.
         }
 
         /// <summary>
@@ -114,7 +127,7 @@ namespace Articles.Business.Services.Concrete
         /// <returns></returns>
         public int SaveComment()
         {
-            return commentRepository.Save();
+            return commentRepository.Save().Result;
         }
 
         /// <summary>

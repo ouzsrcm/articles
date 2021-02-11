@@ -2,9 +2,9 @@
 using Articles.Entities;
 using Articles.Entities.Base;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Articles.DataAccess.Concrete
 {
@@ -18,8 +18,9 @@ namespace Articles.DataAccess.Concrete
 
         public void Add(T entity)
         {
+            entity.UniqueId = Guid.NewGuid();
             entity.CreationDate = DateTime.Now;
-            this.databaseContext.Add<T>(entity);
+            this.databaseContext.AddAsync<T>(entity);
         }
 
         public void Delete(T entity)
@@ -29,20 +30,25 @@ namespace Articles.DataAccess.Concrete
             Update(entity);
         }
 
-        public IEnumerable<T> FindBy(Expression<Func<T, bool>> expression)
+        public async Task<T> FindBy(Expression<Func<T, bool>> expression)
         {
-            var res = this.databaseContext.Set<T>().Where(expression);
-            return res.Where(x => x.IsDeleted == false);
+            return await this.databaseContext.Set<T>().FindAsync(expression);
         }
 
-        public IEnumerable<T> GetAll()
+        public IQueryable<T> Get()
         {
-            return this.databaseContext.Set<T>().Where(x => x.IsDeleted == false);
+            return this.databaseContext.Set<T>().Where(x => x.IsDeleted == false);            
         }
 
-        public int Save()
+        public IQueryable<T> Get(Expression<Func<T, bool>> expression)
         {
-            return this.databaseContext.SaveChanges();
+            var res = this.databaseContext.Set<T>().Where(x => x.IsDeleted == false);
+            return res.Where(expression);
+        }
+
+        public Task<int> Save()
+        {
+            return this.databaseContext.SaveChangesAsync();
         }
 
         public void Update(T entity)

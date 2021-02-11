@@ -9,7 +9,8 @@ namespace Articles.Business.Services.Abstract
     public interface IArticleService
     {
         //Articles
-        IEnumerable<Article> Get(Expression<Func<Article, bool>> expression);
+        IEnumerable<ArticleDto> Get();
+        IEnumerable<ArticleDto> Get(Expression<Func<Article, bool>> expression);
         bool Delete(ArticleDto article);
         ArticleDto Add(ArticleDto article);
         ArticleDto Update(ArticleDto article);

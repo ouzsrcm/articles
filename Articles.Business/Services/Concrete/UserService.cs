@@ -1,8 +1,9 @@
-﻿using Articles.Business.Services.Abstract;
+﻿using Articles.Business.Dtos;
+using Articles.Business.Services.Abstract;
 using Articles.DataAccess.Abstract;
 using Articles.Entities.RecordStructure;
+using AutoMapper;
 using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace Articles.Business.Services.Concrete
@@ -10,14 +11,18 @@ namespace Articles.Business.Services.Concrete
     public class UserService : IUserService
     {
         private readonly IUserRepository userRepository;
-        public UserService(IUserRepository _userRepository)
+        private readonly IMapper mapper;
+        public UserService(IUserRepository _userRepository,
+            IMapper _mapper)
         {
+            this.mapper = _mapper;
             this.userRepository = _userRepository;
         }
 
-        public IEnumerable<User> Get(Expression<Func<User, bool>> expression)
+        public UserDto Get(Expression<Func<User, bool>> expression)
         {
-            return userRepository.FindBy(expression);
+            var res = userRepository.FindBy(expression);
+            return mapper.Map<UserDto>(res.Result);
         }
     }
 }

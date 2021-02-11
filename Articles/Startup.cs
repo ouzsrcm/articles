@@ -1,3 +1,4 @@
+using Articles.Business.Dtos;
 using Articles.Business.Services.Abstract;
 using Articles.Business.Services.Concrete;
 using Articles.DataAccess.Abstract;
@@ -25,20 +26,35 @@ namespace Articles
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
             var connectionString = Configuration.GetConnectionString("connectionString");
             services.AddDbContext<DatabaseContext>(x => x.UseSqlServer(connectionString));
-            services.AddControllers();
 
-            services.AddSingleton<IMapper, Mapper>();
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
 
-            services.AddSingleton<IArticleRepository, ArticleRepository>();
-            services.AddSingleton<ICommentRepository, CommentRepository>();
-            services.AddSingleton<ICategoryRepository, CategoryRepository>();
+            var mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
-            services.AddSingleton<IArticleService, ArticleService>();
-            services.AddSingleton<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IArticleRepository, ArticleRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+            services.AddScoped<IArticleService, ArticleService>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddSwaggerGen();
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
