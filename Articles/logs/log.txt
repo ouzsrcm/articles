@@ -1,0 +1,77 @@
+2021-02-12 17:08:59.094 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-12 17:08:59.106 +03:00 [INF] Hosting environment: Development
+2021-02-12 17:08:59.107 +03:00 [INF] Content root path: C:\Users\oguz.saricam\source\repos\Articles\Articles
+2021-02-12 17:08:59.116 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/weatherforecast  
+2021-02-12 17:08:59.172 +03:00 [INF] Executing endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:08:59.202 +03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Articles.WeatherForecast] Get() on controller Articles.Controllers.WeatherForecastController (Articles).
+2021-02-12 17:08:59.208 +03:00 [INF] Executing ObjectResult, writing value of type 'Articles.WeatherForecast[]'.
+2021-02-12 17:08:59.243 +03:00 [INF] Executed action Articles.Controllers.WeatherForecastController.Get (Articles) in 33.6863ms
+2021-02-12 17:08:59.246 +03:00 [INF] Executed endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:08:59.251 +03:00 [INF] Request finished in 139.0765ms 200 application/json; charset=utf-8
+2021-02-12 17:09:03.794 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:09:03.797 +03:00 [INF] Request finished in 3.3827ms 301 
+2021-02-12 17:09:03.800 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:09:03.824 +03:00 [INF] Request finished in 24.2879ms 200 text/html;charset=utf-8
+2021-02-12 17:09:03.834 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:09:03.834 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:09:03.834 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:09:03.856 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:09:03.856 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:09:03.856 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:09:03.857 +03:00 [INF] Request finished in 23.1697ms 200 application/javascript
+2021-02-12 17:09:03.857 +03:00 [INF] Request finished in 23.075ms 200 application/javascript
+2021-02-12 17:09:03.857 +03:00 [INF] Request finished in 23.1706ms 200 text/css
+2021-02-12 17:09:05.195 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:09:05.196 +03:00 [INF] Request finished in 1.3118ms 301 
+2021-02-12 17:09:05.200 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:09:05.202 +03:00 [INF] Request finished in 2.1076ms 200 text/html;charset=utf-8
+2021-02-12 17:09:05.233 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:09:05.233 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:09:05.233 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:09:05.237 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:09:05.237 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:09:05.237 +03:00 [INF] Request finished in 4.5511ms 200 application/javascript
+2021-02-12 17:09:05.237 +03:00 [INF] Request finished in 4.4749ms 200 text/css
+2021-02-12 17:09:05.238 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:09:05.238 +03:00 [INF] Request finished in 5.4297ms 200 application/javascript
+2021-02-12 17:09:05.533 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/v1/swagger.json  
+2021-02-12 17:09:05.649 +03:00 [INF] Request finished in 116.0205ms 200 application/json;charset=utf-8
+2021-02-12 17:09:09.337 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:09:09.339 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:09:09.342 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:09:10.750 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 17:09:12.960 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ArticleId], [a].[CategoryId], [a].[Content], [a].[CoverImage], [a].[CreationDate], [a].[CreationUserId], [a].[DeletionDate], [a].[IsDeleted], [a].[IsPublished], [a].[Permalink], [a].[SeoUrl], [a].[ShortDescription], [a].[Title], [a].[UniqueId]
+FROM [Articles] AS [a]
+WHERE [a].[IsDeleted] <> CAST(1 AS bit)
+2021-02-12 17:09:12.993 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:09:12.995 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:09:13.000 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 3658.356ms
+2021-02-12 17:09:13.000 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:09:13.006 +03:00 [INF] Request finished in 3669.1893ms 200 application/json; charset=utf-8
+2021-02-12 17:09:45.407 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/published  
+2021-02-12 17:09:45.410 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.Published (Articles)'
+2021-02-12 17:09:45.415 +03:00 [INF] Route matched with {action = "Published", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] Published() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:09:45.451 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 17:09:45.471 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ArticleId], [a].[CategoryId], [a].[Content], [a].[CoverImage], [a].[CreationDate], [a].[CreationUserId], [a].[DeletionDate], [a].[IsDeleted], [a].[IsPublished], [a].[Permalink], [a].[SeoUrl], [a].[ShortDescription], [a].[Title], [a].[UniqueId]
+FROM [Articles] AS [a]
+WHERE ([a].[IsDeleted] <> CAST(1 AS bit)) AND ([a].[IsPublished] = CAST(1 AS bit))
+2021-02-12 17:09:45.471 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:09:45.472 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:09:45.472 +03:00 [INF] Executed action Articles.Controllers.ArticleController.Published (Articles) in 57.2768ms
+2021-02-12 17:09:45.472 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.Published (Articles)'
+2021-02-12 17:09:45.473 +03:00 [INF] Request finished in 65.5031ms 200 application/json; charset=utf-8
+2021-02-12 17:09:47.363 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/published  
+2021-02-12 17:09:47.363 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.Published (Articles)'
+2021-02-12 17:09:47.364 +03:00 [INF] Route matched with {action = "Published", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] Published() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:09:47.377 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 17:09:47.381 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ArticleId], [a].[CategoryId], [a].[Content], [a].[CoverImage], [a].[CreationDate], [a].[CreationUserId], [a].[DeletionDate], [a].[IsDeleted], [a].[IsPublished], [a].[Permalink], [a].[SeoUrl], [a].[ShortDescription], [a].[Title], [a].[UniqueId]
+FROM [Articles] AS [a]
+WHERE ([a].[IsDeleted] <> CAST(1 AS bit)) AND ([a].[IsPublished] = CAST(1 AS bit))
+2021-02-12 17:09:47.382 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:09:47.382 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:09:47.382 +03:00 [INF] Executed action Articles.Controllers.ArticleController.Published (Articles) in 18.2358ms
+2021-02-12 17:09:47.382 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.Published (Articles)'
+2021-02-12 17:09:47.383 +03:00 [INF] Request finished in 20.0576ms 200 application/json; charset=utf-8

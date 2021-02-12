@@ -1,6 +1,7 @@
 ﻿using Articles.Business.Dtos;
 using Articles.Business.Services.Abstract;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 
@@ -10,10 +11,13 @@ namespace Articles.Controllers
     [ApiController]
     public class ArticleController : ControllerBase
     {
+        private readonly ILogger<ArticleController> logger;
         private readonly IArticleService articleService;
 
-        public ArticleController(IArticleService _articleService)
+        public ArticleController(IArticleService _articleService,
+                                 ILogger<ArticleController> _logger)
         {
+            logger = _logger;
             articleService = _articleService;
         }
 
@@ -21,32 +25,72 @@ namespace Articles.Controllers
         [Route("all")]
         public ActionResult<IEnumerable<ArticleDto>> GetAll()
         {
-            var res = articleService.Get();
-            return Ok(res);
+            IEnumerable<ArticleDto> articles = null;
+            try
+            {
+                articles = articleService.Get();
+                logger.LogInformation("Makale listesi alındı.");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                return StatusCode(500, ex.Message);
+            }
+            return Ok(articles);
         }
 
         [HttpGet]
         [Route("published")]
         public ActionResult<IEnumerable<ArticleDto>> Published()
         {
-            var res = articleService.Get(x => x.IsPublished);
-            return Ok(res);
+            IEnumerable<ArticleDto> articles = null;
+            try
+            {
+                articles = articleService.Get(x => x.IsPublished);
+                logger.LogInformation("Makale listesi alındı.");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                return StatusCode(500, ex.Message);
+            }
+            return Ok(articles);
         }
 
         [HttpGet]
         [Route("unpublished")]
         public ActionResult<IEnumerable<ArticleDto>> UnPublished()
         {
-            var res = articleService.Get(x => !x.IsPublished);
-            return Ok(res);
+            IEnumerable<ArticleDto> articles = null;
+            try
+            {
+                articles = articleService.Get(x => !x.IsPublished);
+                logger.LogInformation("Makale listesi alındı.");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                return StatusCode(500, ex.Message);
+            }
+            return Ok(articles);
         }
 
         [HttpGet]
         [Route("ArticleById")]
         public ActionResult<ArticleDto> ArticleById(int ArticleId)
         {
-            var res = articleService.Get(x => x.ArticleId == ArticleId);
-            return Ok(res);
+            IEnumerable<ArticleDto> articles = null;
+            try
+            {
+                articles = articleService.Get(x => x.ArticleId == ArticleId);
+                logger.LogInformation("Makale listesi alındı.");
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                return StatusCode(500, ex.Message);
+            }
+            return Ok(articles);
         }
 
         [HttpPost]
@@ -62,10 +106,13 @@ namespace Articles.Controllers
             {
                 var res = articleService.Add(model);
 
+                logger.LogInformation("Makale eklendi.");
+
                 return Ok(res);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
+                logger.LogError(ex.Message);
                 return StatusCode(500, ex.Message);
             }
         }
@@ -84,8 +131,9 @@ namespace Articles.Controllers
                 var res = articleService.Add(model);
                 return Ok(res);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
+                logger.LogError(ex.Message);
                 return StatusCode(500, ex.Message);
             }
         }
@@ -96,10 +144,12 @@ namespace Articles.Controllers
             try
             {
                 var res = articleService.Delete(UniqueHash);
+                logger.LogInformation($"{UniqueHash} id'li makale silindi.");
                 return Ok(res ? "Makale kaydı başarıyla silindi." : "Makale silinemedi");
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
+                logger.LogError(ex.Message);
                 return StatusCode(500, ex.Message);
             }
         }
