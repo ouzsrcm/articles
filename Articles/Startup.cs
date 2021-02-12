@@ -54,6 +54,8 @@ namespace Articles
 
             services.AddSwaggerGen();
 
+            services.AddMemoryCache();
+
             services.AddControllers();
         }
 

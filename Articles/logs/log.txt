@@ -75,3 +75,265 @@ WHERE ([a].[IsDeleted] <> CAST(1 AS bit)) AND ([a].[IsPublished] = CAST(1 AS bit
 2021-02-12 17:09:47.382 +03:00 [INF] Executed action Articles.Controllers.ArticleController.Published (Articles) in 18.2358ms
 2021-02-12 17:09:47.382 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.Published (Articles)'
 2021-02-12 17:09:47.383 +03:00 [INF] Request finished in 20.0576ms 200 application/json; charset=utf-8
+2021-02-12 17:33:28.134 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-12 17:33:28.146 +03:00 [INF] Hosting environment: Development
+2021-02-12 17:33:28.147 +03:00 [INF] Content root path: C:\Users\oguz.saricam\source\repos\Articles\Articles
+2021-02-12 17:33:28.154 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/weatherforecast  
+2021-02-12 17:33:28.201 +03:00 [INF] Executing endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:33:28.224 +03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Articles.WeatherForecast] Get() on controller Articles.Controllers.WeatherForecastController (Articles).
+2021-02-12 17:33:28.230 +03:00 [INF] Executing ObjectResult, writing value of type 'Articles.WeatherForecast[]'.
+2021-02-12 17:33:28.255 +03:00 [INF] Executed action Articles.Controllers.WeatherForecastController.Get (Articles) in 25.7673ms
+2021-02-12 17:33:28.256 +03:00 [INF] Executed endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:33:28.259 +03:00 [INF] Request finished in 109.3176ms 200 application/json; charset=utf-8
+2021-02-12 17:33:32.110 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:33:32.114 +03:00 [INF] Request finished in 3.6551ms 301 
+2021-02-12 17:33:32.117 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:33:32.144 +03:00 [INF] Request finished in 27.0998ms 200 text/html;charset=utf-8
+2021-02-12 17:33:32.154 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:33:32.154 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:33:32.154 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:33:32.175 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:33:32.175 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:33:32.175 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:33:32.176 +03:00 [INF] Request finished in 21.7488ms 200 application/javascript
+2021-02-12 17:33:32.176 +03:00 [INF] Request finished in 21.7555ms 200 text/css
+2021-02-12 17:33:32.176 +03:00 [INF] Request finished in 21.7095ms 200 application/javascript
+2021-02-12 17:33:33.629 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:33:33.631 +03:00 [INF] Request finished in 1.37ms 301 
+2021-02-12 17:33:33.635 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:33:33.637 +03:00 [INF] Request finished in 2.1161ms 200 text/html;charset=utf-8
+2021-02-12 17:33:33.670 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:33:33.670 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:33:33.670 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:33:33.674 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:33:33.674 +03:00 [INF] Request finished in 4.1385ms 200 text/css
+2021-02-12 17:33:33.674 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:33:33.675 +03:00 [INF] Request finished in 4.5193ms 200 application/javascript
+2021-02-12 17:33:33.676 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:33:33.676 +03:00 [INF] Request finished in 6.2976ms 200 application/javascript
+2021-02-12 17:33:33.942 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/v1/swagger.json  
+2021-02-12 17:33:34.037 +03:00 [INF] Request finished in 95.0999ms 200 application/json;charset=utf-8
+2021-02-12 17:33:40.763 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:33:40.765 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:33:40.768 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:33:41.744 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 17:33:43.300 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ArticleId], [a].[CategoryId], [a].[Content], [a].[CoverImage], [a].[CreationDate], [a].[CreationUserId], [a].[DeletionDate], [a].[IsDeleted], [a].[IsPublished], [a].[Permalink], [a].[SeoUrl], [a].[ShortDescription], [a].[Title], [a].[UniqueId]
+FROM [Articles] AS [a]
+WHERE [a].[IsDeleted] <> CAST(1 AS bit)
+2021-02-12 17:33:43.319 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:33:43.320 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:33:43.322 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 2554.4763ms
+2021-02-12 17:33:43.323 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:33:43.326 +03:00 [INF] Request finished in 2563.3464ms 200 application/json; charset=utf-8
+2021-02-12 17:33:49.141 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:33:49.143 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:33:49.144 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:33:49.161 +03:00 [ERR] Error mapping types.
+
+Mapping types:
+IEnumerable`1 -> IEnumerable`1
+System.Collections.Generic.IEnumerable`1[[Articles.Entities.RecordStructure.Article, Articles.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2021-02-12 17:33:49.162 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-02-12 17:33:49.162 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 17.9944ms
+2021-02-12 17:33:49.162 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:33:49.163 +03:00 [INF] Request finished in 21.6422ms 500 text/plain; charset=utf-8
+2021-02-12 17:34:14.760 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/published  
+2021-02-12 17:34:14.761 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.Published (Articles)'
+2021-02-12 17:34:14.763 +03:00 [INF] Route matched with {action = "Published", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] Published() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:34:14.799 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 17:34:14.809 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ArticleId], [a].[CategoryId], [a].[Content], [a].[CoverImage], [a].[CreationDate], [a].[CreationUserId], [a].[DeletionDate], [a].[IsDeleted], [a].[IsPublished], [a].[Permalink], [a].[SeoUrl], [a].[ShortDescription], [a].[Title], [a].[UniqueId]
+FROM [Articles] AS [a]
+WHERE ([a].[IsDeleted] <> CAST(1 AS bit)) AND ([a].[IsPublished] = CAST(1 AS bit))
+2021-02-12 17:34:14.809 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:34:14.809 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:34:14.810 +03:00 [INF] Executed action Articles.Controllers.ArticleController.Published (Articles) in 46.4364ms
+2021-02-12 17:34:14.810 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.Published (Articles)'
+2021-02-12 17:34:14.810 +03:00 [INF] Request finished in 50.5582ms 200 application/json; charset=utf-8
+2021-02-12 17:35:22.192 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-12 17:35:22.212 +03:00 [INF] Hosting environment: Development
+2021-02-12 17:35:22.213 +03:00 [INF] Content root path: C:\Users\oguz.saricam\source\repos\Articles\Articles
+2021-02-12 17:35:22.231 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:35:22.231 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/weatherforecast  
+2021-02-12 17:35:22.316 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:35:22.318 +03:00 [INF] Request finished in 87.5608ms 301 
+2021-02-12 17:35:22.408 +03:00 [INF] Executing endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:35:22.463 +03:00 [INF] Request finished in 146.7ms 200 text/html;charset=utf-8
+2021-02-12 17:35:22.492 +03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Articles.WeatherForecast] Get() on controller Articles.Controllers.WeatherForecastController (Articles).
+2021-02-12 17:35:22.507 +03:00 [INF] Executing ObjectResult, writing value of type 'Articles.WeatherForecast[]'.
+2021-02-12 17:35:22.526 +03:00 [INF] Executed action Articles.Controllers.WeatherForecastController.Get (Articles) in 26.0788ms
+2021-02-12 17:35:22.528 +03:00 [INF] Executed endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:35:22.528 +03:00 [INF] Request finished in 304.15ms 200 application/json; charset=utf-8
+2021-02-12 17:35:23.076 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:35:23.076 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:35:23.076 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:35:23.201 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:35:23.201 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:35:23.201 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:35:23.204 +03:00 [INF] Request finished in 129.487ms 200 text/css
+2021-02-12 17:35:23.204 +03:00 [INF] Request finished in 129.5256ms 200 application/javascript
+2021-02-12 17:35:23.204 +03:00 [INF] Request finished in 129.2929ms 200 application/javascript
+2021-02-12 17:35:23.606 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/v1/swagger.json  
+2021-02-12 17:35:23.758 +03:00 [INF] Request finished in 151.606ms 200 application/json;charset=utf-8
+2021-02-12 17:35:28.146 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:35:28.149 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:35:28.159 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:35:41.538 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 17:35:51.462 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ArticleId], [a].[CategoryId], [a].[Content], [a].[CoverImage], [a].[CreationDate], [a].[CreationUserId], [a].[DeletionDate], [a].[IsDeleted], [a].[IsPublished], [a].[Permalink], [a].[SeoUrl], [a].[ShortDescription], [a].[Title], [a].[UniqueId]
+FROM [Articles] AS [a]
+WHERE [a].[IsDeleted] <> CAST(1 AS bit)
+2021-02-12 17:35:55.584 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:35:55.587 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:35:55.590 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 27430.1716ms
+2021-02-12 17:35:55.590 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:35:55.596 +03:00 [INF] Request finished in 27449.44ms 200 application/json; charset=utf-8
+2021-02-12 17:36:02.234 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:36:02.237 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:36:02.239 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:39:56.517 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-12 17:39:56.536 +03:00 [INF] Hosting environment: Development
+2021-02-12 17:39:56.538 +03:00 [INF] Content root path: C:\Users\oguz.saricam\source\repos\Articles\Articles
+2021-02-12 17:39:56.549 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/weatherforecast  
+2021-02-12 17:39:56.622 +03:00 [INF] Executing endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:39:56.662 +03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Articles.WeatherForecast] Get() on controller Articles.Controllers.WeatherForecastController (Articles).
+2021-02-12 17:39:56.671 +03:00 [INF] Executing ObjectResult, writing value of type 'Articles.WeatherForecast[]'.
+2021-02-12 17:39:56.711 +03:00 [INF] Executed action Articles.Controllers.WeatherForecastController.Get (Articles) in 41.4334ms
+2021-02-12 17:39:56.712 +03:00 [INF] Executed endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:39:56.716 +03:00 [INF] Request finished in 174.4727ms 200 application/json; charset=utf-8
+2021-02-12 17:39:58.924 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:39:58.928 +03:00 [INF] Request finished in 3.3642ms 301 
+2021-02-12 17:39:58.930 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:39:58.955 +03:00 [INF] Request finished in 24.9367ms 200 text/html;charset=utf-8
+2021-02-12 17:39:58.966 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:39:58.966 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:39:58.966 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:39:58.986 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:39:58.986 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:39:58.986 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:39:58.988 +03:00 [INF] Request finished in 21.4708ms 200 text/css
+2021-02-12 17:39:58.988 +03:00 [INF] Request finished in 21.4679ms 200 application/javascript
+2021-02-12 17:39:58.988 +03:00 [INF] Request finished in 21.4801ms 200 application/javascript
+2021-02-12 17:39:59.691 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:39:59.692 +03:00 [INF] Request finished in 1.1657ms 301 
+2021-02-12 17:39:59.695 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:39:59.698 +03:00 [INF] Request finished in 2.0543ms 200 text/html;charset=utf-8
+2021-02-12 17:39:59.723 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:39:59.723 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:39:59.723 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:39:59.727 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:39:59.727 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:39:59.727 +03:00 [INF] Request finished in 4.5669ms 200 application/javascript
+2021-02-12 17:39:59.727 +03:00 [INF] Request finished in 4.6494ms 200 text/css
+2021-02-12 17:39:59.728 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:39:59.728 +03:00 [INF] Request finished in 5.3689ms 200 application/javascript
+2021-02-12 17:39:59.992 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/v1/swagger.json  
+2021-02-12 17:40:00.101 +03:00 [INF] Request finished in 108.6257ms 200 application/json;charset=utf-8
+2021-02-12 17:40:16.794 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-12 17:40:16.810 +03:00 [INF] Hosting environment: Development
+2021-02-12 17:40:16.812 +03:00 [INF] Content root path: C:\Users\oguz.saricam\source\repos\Articles\Articles
+2021-02-12 17:40:16.826 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/weatherforecast  
+2021-02-12 17:40:16.826 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:40:16.894 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:40:16.907 +03:00 [INF] Request finished in 85.2007ms 301 
+2021-02-12 17:40:16.957 +03:00 [INF] Executing endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:40:16.985 +03:00 [INF] Request finished in 90.6836ms 200 text/html;charset=utf-8
+2021-02-12 17:40:16.997 +03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Articles.WeatherForecast] Get() on controller Articles.Controllers.WeatherForecastController (Articles).
+2021-02-12 17:40:17.010 +03:00 [INF] Executing ObjectResult, writing value of type 'Articles.WeatherForecast[]'.
+2021-02-12 17:40:17.029 +03:00 [INF] Executed action Articles.Controllers.WeatherForecastController.Get (Articles) in 24.4071ms
+2021-02-12 17:40:17.030 +03:00 [INF] Executed endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:40:17.031 +03:00 [INF] Request finished in 210.8551ms 200 application/json; charset=utf-8
+2021-02-12 17:40:17.041 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:40:17.041 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:40:17.043 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:40:17.137 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:40:17.137 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:40:17.137 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:40:17.139 +03:00 [INF] Request finished in 98.0373ms 200 text/css
+2021-02-12 17:40:17.139 +03:00 [INF] Request finished in 96.6913ms 200 application/javascript
+2021-02-12 17:40:17.139 +03:00 [INF] Request finished in 98.0373ms 200 application/javascript
+2021-02-12 17:40:17.652 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/v1/swagger.json  
+2021-02-12 17:40:17.843 +03:00 [INF] Request finished in 190.7704ms 200 application/json;charset=utf-8
+2021-02-12 17:40:23.402 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:40:23.406 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:40:23.410 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:40:26.592 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 17:40:27.403 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ArticleId], [a].[CategoryId], [a].[Content], [a].[CoverImage], [a].[CreationDate], [a].[CreationUserId], [a].[DeletionDate], [a].[IsDeleted], [a].[IsPublished], [a].[Permalink], [a].[SeoUrl], [a].[ShortDescription], [a].[Title], [a].[UniqueId]
+FROM [Articles] AS [a]
+WHERE [a].[IsDeleted] <> CAST(1 AS bit)
+2021-02-12 17:40:27.424 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:40:27.425 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:40:27.428 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 4018.1519ms
+2021-02-12 17:40:27.428 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:40:27.432 +03:00 [INF] Request finished in 4030.7458ms 200 application/json; charset=utf-8
+2021-02-12 17:40:29.820 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:40:29.823 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:40:29.824 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:40:33.485 +03:00 [ERR] Error mapping types.
+
+Mapping types:
+IEnumerable`1 -> IEnumerable`1
+System.Collections.Generic.IEnumerable`1[[Articles.Entities.RecordStructure.Article, Articles.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2021-02-12 17:40:33.486 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-02-12 17:40:33.487 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 3662.8549ms
+2021-02-12 17:40:33.487 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:40:33.488 +03:00 [INF] Request finished in 3668.2678ms 500 text/plain; charset=utf-8
+2021-02-12 17:40:55.729 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:40:55.731 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:40:55.731 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:42:46.901 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-02-12 17:42:46.921 +03:00 [INF] Hosting environment: Development
+2021-02-12 17:42:46.922 +03:00 [INF] Content root path: C:\Users\oguz.saricam\source\repos\Articles\Articles
+2021-02-12 17:42:46.933 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/weatherforecast  
+2021-02-12 17:42:47.007 +03:00 [INF] Executing endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:42:47.039 +03:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Articles.WeatherForecast] Get() on controller Articles.Controllers.WeatherForecastController (Articles).
+2021-02-12 17:42:47.048 +03:00 [INF] Executing ObjectResult, writing value of type 'Articles.WeatherForecast[]'.
+2021-02-12 17:42:47.080 +03:00 [INF] Executed action Articles.Controllers.WeatherForecastController.Get (Articles) in 33.8736ms
+2021-02-12 17:42:47.082 +03:00 [INF] Executed endpoint 'Articles.Controllers.WeatherForecastController.Get (Articles)'
+2021-02-12 17:42:47.086 +03:00 [INF] Request finished in 160.2064ms 200 application/json; charset=utf-8
+2021-02-12 17:42:50.438 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger  
+2021-02-12 17:42:50.442 +03:00 [INF] Request finished in 3.4355ms 301 
+2021-02-12 17:42:50.444 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/index.html  
+2021-02-12 17:42:50.469 +03:00 [INF] Request finished in 24.5782ms 200 text/html;charset=utf-8
+2021-02-12 17:42:50.497 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui.css  
+2021-02-12 17:42:50.497 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-standalone-preset.js  
+2021-02-12 17:42:50.497 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/swagger-ui-bundle.js  
+2021-02-12 17:42:50.520 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2021-02-12 17:42:50.520 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2021-02-12 17:42:50.520 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2021-02-12 17:42:50.522 +03:00 [INF] Request finished in 24.3253ms 200 text/css
+2021-02-12 17:42:50.522 +03:00 [INF] Request finished in 24.3256ms 200 application/javascript
+2021-02-12 17:42:50.522 +03:00 [INF] Request finished in 24.3308ms 200 application/javascript
+2021-02-12 17:42:50.800 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/swagger/v1/swagger.json  
+2021-02-12 17:42:50.911 +03:00 [INF] Request finished in 110.9861ms 200 application/json;charset=utf-8
+2021-02-12 17:42:55.163 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:42:55.166 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:42:55.169 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:42:56.049 +03:00 [INF] Entity Framework Core 5.0.3 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-02-12 17:42:56.703 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ArticleId], [a].[CategoryId], [a].[Content], [a].[CoverImage], [a].[CreationDate], [a].[CreationUserId], [a].[DeletionDate], [a].[IsDeleted], [a].[IsPublished], [a].[Permalink], [a].[SeoUrl], [a].[ShortDescription], [a].[Title], [a].[UniqueId]
+FROM [Articles] AS [a]
+WHERE [a].[IsDeleted] <> CAST(1 AS bit)
+2021-02-12 17:42:56.747 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:42:56.748 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:42:56.750 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 1581.176ms
+2021-02-12 17:42:56.750 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:42:56.754 +03:00 [INF] Request finished in 1591.1278ms 200 application/json; charset=utf-8
+2021-02-12 17:42:59.221 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:42:59.223 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:42:59.223 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:42:59.224 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:42:59.225 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:42:59.225 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 1.7767ms
+2021-02-12 17:42:59.225 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:42:59.225 +03:00 [INF] Request finished in 5.0064ms 200 application/json; charset=utf-8
+2021-02-12 17:43:02.266 +03:00 [INF] Request starting HTTP/2.0 GET https://localhost:44339/api/articles/all  
+2021-02-12 17:43:02.267 +03:00 [INF] Executing endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:43:02.268 +03:00 [INF] Route matched with {action = "GetAll", controller = "Article"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Articles.Business.Dtos.ArticleDto]] GetAll() on controller Articles.Controllers.ArticleController (Articles).
+2021-02-12 17:43:02.273 +03:00 [INF] Makale listesi alındı.
+2021-02-12 17:43:02.274 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Articles.Business.Dtos.ArticleDto, Articles.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-02-12 17:43:02.274 +03:00 [INF] Executed action Articles.Controllers.ArticleController.GetAll (Articles) in 6.2425ms
+2021-02-12 17:43:02.275 +03:00 [INF] Executed endpoint 'Articles.Controllers.ArticleController.GetAll (Articles)'
+2021-02-12 17:43:02.275 +03:00 [INF] Request finished in 8.9484ms 200 application/json; charset=utf-8

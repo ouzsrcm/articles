@@ -3,6 +3,7 @@ using Articles.Business.Services.Abstract;
 using Articles.DataAccess.Abstract;
 using Articles.Entities.RecordStructure;
 using AutoMapper;
+using Microsoft.Extensions.Caching.Memory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Articles.Business.Services.Concrete
     public class ArticleService : IArticleService
     {
         private readonly IMapper mapper;
-
+        private readonly IMemoryCache memoryCache;
         private readonly IArticleRepository articleRepository;
         private readonly ICommentRepository commentRepository;
         private readonly ICategoryRepository categoryRepository;
@@ -21,10 +22,11 @@ namespace Articles.Business.Services.Concrete
         public ArticleService(IArticleRepository _articleRepository,
                               ICommentRepository _commentRepository,
                               ICategoryRepository _categoryRepository,
+                              IMemoryCache _memoryCache,
                               IMapper _mapper)
         {
             this.mapper = _mapper;
-
+            this.memoryCache = _memoryCache;
             this.articleRepository = _articleRepository;
             this.commentRepository = _commentRepository;
             this.categoryRepository = _categoryRepository;
@@ -61,7 +63,7 @@ namespace Articles.Business.Services.Concrete
             var res = categoryRepository.Add(entity);
 
             SaveCategory();
-            
+
             return mapper.Map<CategoryDto>(res);
         }
 
@@ -116,8 +118,13 @@ namespace Articles.Business.Services.Concrete
         /// <returns></returns>
         public IEnumerable<ArticleDto> Get()
         {
-            var res = articleRepository.Get();
-            return mapper.Map<IEnumerable<Article>, IEnumerable<ArticleDto>>(res);
+            var res = memoryCache.Load("articlelist");
+            if (res == null)
+            {
+                res = articleRepository.Get().ToList();
+                memoryCache.Store("articlelist", res);
+            }
+            return mapper.Map<IEnumerable<Article>, IEnumerable<ArticleDto>>((IEnumerable<Article>)res);
         }
 
         /// <summary>
@@ -127,8 +134,13 @@ namespace Articles.Business.Services.Concrete
         /// <returns></returns>
         public IEnumerable<ArticleDto> Get(Expression<Func<Article, bool>> expression)
         {
-            var res = articleRepository.Get(expression);
-            return mapper.Map<IEnumerable<Article>, IEnumerable<ArticleDto>>(res);
+            var res = memoryCache.Load("articlelistwithexpr");
+            if (res == null)
+            {
+                res = articleRepository.Get(expression).ToList();
+                memoryCache.Store("articlelistwithexpr", res);
+            }
+            return mapper.Map<IEnumerable<Article>, IEnumerable<ArticleDto>>((IEnumerable<Article>)res);
         }
 
         public IEnumerable<CategoryDto> GetCategories()
